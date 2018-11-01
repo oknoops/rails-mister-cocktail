@@ -9,13 +9,15 @@
     <% @cocktail.doses.each do |dose| %>
     <div class = 'col-xs-4'>
       <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://picsum.photos/300/200/?random" alt="Card image cap">
+        <img class="card-img-top" src="https://images.pexels.com/photos/1132718/pexels-photo-1132718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=200" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">
             <%= dose.description %>
-            <%= dose.ingredient.name %>
-            <%= link_to "Delete this dose", cocktail_dose_path(@cocktail), method: :delete, class: "btn btn-primary" %>
           </h5>
+          <h5 class = 'card-text'>
+            <%= dose.ingredient.name %>
+          </h5>
+          <%= link_to "Delete this dose", cocktail_dose_path(@cocktail), method: :delete, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
@@ -24,3 +26,4 @@
 </div>
 
 <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+<%= link_to "Return to Cocktails", cocktails_path, class: "btn btn-primary" %>

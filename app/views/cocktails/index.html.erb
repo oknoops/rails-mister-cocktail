@@ -1,22 +1,21 @@
 <div class = 'navbar-wagon'>
- <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  Oscar's Cocktails!
 </div>
 
 <div class = 'banner'>
   <div class = 'banner-text'>
     <h1>All the Cocktails!</h1>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
   </div>
 </div>
 
 <div class = 'container'>
   <div class = 'row'>
-
     <% @cocktails.each do |cocktail| %>
     <div class = 'col-sm-4'>
-      <div class="card" style="">
-        <img class="card-img-top" src="https://picsum.photos/300/200?image=1068" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= cocktail.name %></h5>
+      <div class="card-cocktail">
+        <div class="card-cocktail-body">
+          <h5><%= cocktail.name %></h5>
           <%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"  %>
         </div>
       </div>

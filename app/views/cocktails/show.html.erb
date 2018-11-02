@@ -1,4 +1,11 @@
-<div class = 'banner'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+<div class = 'navbar-wagon'>
+  Oscar's Cocktails!
+  <%= link_to "Return to Cocktails", cocktails_path, class: "btn btn-primary" %>
+</div>
+
+<div class = 'banner-cocktail'>
   <div class = 'banner-text'>
     <h1> <%= @cocktail.name %> </h1>
   </div>
@@ -8,22 +15,25 @@
   <div class = 'row'>
     <% @cocktail.doses.each do |dose| %>
     <div class = 'col-xs-4'>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://images.pexels.com/photos/1132718/pexels-photo-1132718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=200" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">
-            <%= dose.description %>
-          </h5>
-          <h5 class = 'card-text'>
-            <%= dose.ingredient.name %>
-          </h5>
-          <%= link_to "Delete this dose", cocktail_dose_path(@cocktail), method: :delete, class: "btn btn-primary" %>
+      <div class="card-dose" style="background-image: url(<%= dose.ingredient.image %>); color: blue;">
+        <div class="card-dose-body">
+          <h5><%= dose.description %></h5>
+          <h5><%= dose.ingredient.name %></h5>
+          <div = class = "delete">
+            <%= link_to "Delete this dose", cocktail_dose_path(@cocktail, dose), method: :delete, class: "btn btn-primary" %>
+          </div>
         </div>
       </div>
     </div>
     <% end %>
+    <div class = 'col-sm-4'>
+      <div class = 'card-dose'>
+        <div class = 'card-dose-body'>
+          <%= link_to "", new_cocktail_dose_path(@cocktail), class: "fas fa-plus fa-7x" %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
-<%= link_to "Return to Cocktails", cocktails_path, class: "btn btn-primary" %>
+

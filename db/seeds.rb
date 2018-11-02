@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon", image: 'https://images.pexels.com/photos/1414110/pexels-photo-1414110.jpeg?cs=srgb&dl=acid-bright-citrus-1414110.jpg&fm=jpg')
+Ingredient.create(name: "lemon", image: 'https://images.pexels.com/photos/1446317/pexels-photo-1446317.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
 Ingredient.create(name: "ice", image: 'https://images.pexels.com/photos/434259/pexels-photo-434259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
 Ingredient.create(name: "mint leaves", image: 'https://images.pexels.com/photos/1132718/pexels-photo-1132718.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+Ingredient.create(name: "gin", image: 'https://images.pexels.com/photos/1277203/pexels-photo-1277203.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+Ingredient.create(name: "tonic elderflower", image: 'https://images.pexels.com/photos/34293/lime-club-soda-drink-cocktail.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+Ingredient.create(name: "cucumber", image: 'https://images.pexels.com/photos/37528/cucumber-salad-food-healthy-37528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
